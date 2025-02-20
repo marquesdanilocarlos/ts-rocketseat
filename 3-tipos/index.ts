@@ -20,3 +20,14 @@ console.log(results)
 const mixedArray: any[] = ['Danilo', 10, true, {}]
 mixedArray.push({})
 console.log(mixedArray)
+
+//Tipagem de parâmetros
+
+function sum(a: number, b: number) {
+    return a+b
+}
+
+//Não permite
+//console.log(sum('a', 'b'))
+
+console.log(sum(10,8))

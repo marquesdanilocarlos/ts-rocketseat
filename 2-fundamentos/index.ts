@@ -31,3 +31,6 @@ const ann: string = 'teste';
 
 //O TS define 'automaticamente'
 let inf = 'teste'
+
+
+alert(fullName)

@@ -31,3 +31,11 @@ function sum(a: number, b: number) {
 //console.log(sum('a', 'b'))
 
 console.log(sum(10,8))
+
+//Tipagem de retorno
+
+function greeting(name: string): string {
+    return `Hello ${name}!`
+}
+
+console.log(greeting('Danilo'))

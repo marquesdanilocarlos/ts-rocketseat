@@ -9,3 +9,8 @@ console.log(numbers[2])
 
 const names: string[] = ['Danilo', 'Teste'];
 console.log(names)
+
+const results: Array<boolean> = [true, false, false, false, true];
+results.push(true);
+
+console.log(results);

@@ -1,3 +1,4 @@
+//Array
 let numbers: number[] = [1,2,3]
 numbers.push(5)
 
@@ -10,7 +11,12 @@ console.log(numbers[2])
 const names: string[] = ['Danilo', 'Teste'];
 console.log(names)
 
-const results: Array<boolean> = [true, false, false, false, true];
-results.push(true);
+const results: Array<boolean> = [true, false, false, false, true]
+results.push(true)
 
-console.log(results);
+console.log(results)
+
+//Any
+const mixedArray: any[] = ['Danilo', 10, true, {}]
+mixedArray.push({})
+console.log(mixedArray)

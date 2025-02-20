@@ -18,3 +18,8 @@ let fullName: string
 fullName = `${firstName} ${lastName}`
 
 console.log(fullName)
+
+
+let result: boolean = true
+let notResult: boolean = false
+console.log(result && notResult)

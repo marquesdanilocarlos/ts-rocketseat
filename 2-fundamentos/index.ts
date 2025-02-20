@@ -23,3 +23,11 @@ console.log(fullName)
 let result: boolean = true
 let notResult: boolean = false
 console.log(result && notResult)
+
+/*Infenrencia e annotation*/
+
+//Definição por annotation, deliberada
+const ann: string = 'teste';
+
+//O TS define 'automaticamente'
+let inf = 'teste'

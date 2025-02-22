@@ -70,3 +70,13 @@ function passCordinatesDestructuring({x, y}: {x: number, y:number}): void {
 //Não permite
 //passCordinatesDestructuring({x: 132, y: 'Danilo'});
 passCordinatesDestructuring({x: 69, y: 892});
+
+//Propriedades opcionais
+
+function showNumbers(a: number, b: number, c?:number): void {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+showNumbers(12, 36);

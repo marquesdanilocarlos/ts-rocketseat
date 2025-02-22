@@ -193,3 +193,9 @@ showDirection("left");
 const p = document.querySelector('#someP');
 
 console.log(p!.innerText);
+
+
+//BigInt
+
+let n: bigint = 1000n;
+console.log(n);

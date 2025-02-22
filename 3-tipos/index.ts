@@ -125,3 +125,51 @@ function showId(id: ID): void
 
 showId('Danilo');
 showId(10);
+
+//Interfaces
+
+interface Point {
+    x: number,
+    y: number,
+    z: number
+}
+
+function showCoords({x, y, z}: Point): void {
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}
+
+const coordObject: Point = {
+    x: 1234,
+    y: 754,
+    z: 100
+};
+
+showCoords(coordObject);
+
+//Interface X Type Alias
+
+//A interface pode sofrer alterações...
+interface Person {
+    name: string
+}
+
+interface Person {
+    age: number
+}
+
+const somePerson: Person = {name: 'Danilão', age: 33};
+console.log(somePerson);
+
+//... o type não.
+type PersonType = {
+    name: string
+}
+
+/*
+Não permite:
+
+type PersonType = {
+    age: number
+} */

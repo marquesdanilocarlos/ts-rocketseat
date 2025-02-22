@@ -199,3 +199,9 @@ console.log(p!.innerText);
 
 let n: bigint = 1000n;
 console.log(n);
+
+//Symbol
+let symbolA: symbol = Symbol('A');
+let symbolA2: symbol = Symbol('A');
+
+console.log(symbolA === symbolA2);

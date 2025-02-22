@@ -45,6 +45,7 @@ console.log(greeting('Danilo'))
 setTimeout(function() {
     const sallary: number = 1000
     //console.log(parseFloat(sallary))
+    console.log(sallary.toFixed(2))
 }, 2000)
 
 //Tipagem em objetc literals
@@ -71,8 +72,7 @@ function passCordinatesDestructuring({x, y}: {x: number, y:number}): void {
 //passCordinatesDestructuring({x: 132, y: 'Danilo'});
 passCordinatesDestructuring({x: 69, y: 892});
 
-//Propriedades opcionais
-
+//Argumentos opcionais
 function showNumbers(a: number, b: number, c?:number): void {
     console.log(a);
     console.log(b);
@@ -80,3 +80,15 @@ function showNumbers(a: number, b: number, c?:number): void {
 }
 
 showNumbers(12, 36);
+
+//Validação de argumento opcional
+function advancedGreeting(firstName: string, lastName?: string): string {
+    if (lastName !== undefined) {
+        return `Olá, ${firstName} ${lastName}!`;
+    }
+
+    return `Olá, ${firstName}`;
+}
+
+const advanced = advancedGreeting('Danilo', 'Marques');
+console.log(advanced);

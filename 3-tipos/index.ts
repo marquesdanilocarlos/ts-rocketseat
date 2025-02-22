@@ -113,3 +113,15 @@ function showUserRole(role: boolean | string): string {
 }
 
 console.log(showUserRole('Admin'));
+
+//Type alias
+
+type ID = string | number;
+
+function showId(id: ID): void
+{
+    console.log(`O ID é: ${id}`);
+}
+
+showId('Danilo');
+showId(10);

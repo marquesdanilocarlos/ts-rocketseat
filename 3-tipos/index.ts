@@ -173,3 +173,17 @@ Não permite:
 type PersonType = {
     age: number
 } */
+
+//Literal types
+let test: "testando";
+
+//Não pode
+//test = 'Danilo'
+test = "testando";
+
+function showDirection(direction: "left" | "right" | "center"): void {
+    console.log(direction);
+}
+//Não pode
+//showDirection("top");
+showDirection("left");

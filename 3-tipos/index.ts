@@ -44,5 +44,29 @@ console.log(greeting('Danilo'))
 
 setTimeout(function() {
     const sallary: number = 1000
-    console.log(parseFloat(sallary))
+    //console.log(parseFloat(sallary))
 }, 2000)
+
+//Tipagem em objetc literals
+
+function passCordinates(coord: {x: number, y: number}): void {
+    console.log(coord.x);
+    console.log(coord.y);
+}
+
+//Não permite
+//const coordObj = {x: 132, y: 'danilo'};
+const coordObj = {x: 132, y: 421.96};
+
+
+passCordinates(coordObj);
+
+//Tipagem em argumentos com desestruturação
+function passCordinatesDestructuring({x, y}: {x: number, y:number}): void {
+    console.log(x);
+    console.log(y);
+}
+
+//Não permite
+//passCordinatesDestructuring({x: 132, y: 'Danilo'});
+passCordinatesDestructuring({x: 69, y: 892});

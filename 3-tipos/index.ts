@@ -187,3 +187,9 @@ function showDirection(direction: "left" | "right" | "center"): void {
 //Não pode
 //showDirection("top");
 showDirection("left");
+
+//Non null assertion operator
+
+const p = document.querySelector('#someP');
+
+console.log(p!.innerText);

@@ -1,5 +1,5 @@
 //Array
-let numbers: number[] = [1,2,3]
+let numbers: number[] = [1, 2, 3]
 numbers.push(5)
 
 console.log(numbers[2])
@@ -24,13 +24,13 @@ console.log(mixedArray)
 //Tipagem de parâmetros
 
 function sum(a: number, b: number) {
-    return a+b
+    return a + b
 }
 
 //Não permite
 //console.log(sum('a', 'b'))
 
-console.log(sum(10,8))
+console.log(sum(10, 8))
 
 //Tipagem de retorno
 
@@ -42,15 +42,15 @@ console.log(greeting('Danilo'))
 
 //Função anonima
 
-setTimeout(function() {
-    const sallary: number = 1000
+setTimeout(function () {
+    //const sallary: number = 1000
     //console.log(parseFloat(sallary))
-    console.log(sallary.toFixed(2))
+    //console.log(sallary.toFixed(2))
 }, 2000)
 
 //Tipagem em objetc literals
 
-function passCordinates(coord: {x: number, y: number}): void {
+function passCordinates(coord: { x: number, y: number }): void {
     console.log(coord.x);
     console.log(coord.y);
 }
@@ -63,7 +63,7 @@ const coordObj = {x: 132, y: 421.96};
 passCordinates(coordObj);
 
 //Tipagem em argumentos com desestruturação
-function passCordinatesDestructuring({x, y}: {x: number, y:number}): void {
+function passCordinatesDestructuring({x, y}: { x: number, y: number }): void {
     console.log(x);
     console.log(y);
 }
@@ -73,7 +73,7 @@ function passCordinatesDestructuring({x, y}: {x: number, y:number}): void {
 passCordinatesDestructuring({x: 69, y: 892});
 
 //Argumentos opcionais
-function showNumbers(a: number, b: number, c?:number): void {
+function showNumbers(a: number, b: number, c?: number): void {
     console.log(a);
     console.log(b);
     console.log(c);
@@ -92,3 +92,24 @@ function advancedGreeting(firstName: string, lastName?: string): string {
 
 const advanced = advancedGreeting('Danilo', 'Marques');
 console.log(advanced);
+
+//Union types
+
+function showBalance(balance: string | number): string {
+    return `O saldo da conta é ${balance}`;
+}
+
+console.log(showBalance(421));
+console.log(showBalance('Danilo'));
+
+const arrayMixed: Array<number | string> = [1, 'Danilo', 125.36];
+
+function showUserRole(role: boolean | string): string {
+    if (typeof role === 'boolean') {
+        return 'Usuário não aprovado';
+    }
+
+    return `A função do usuário é ${role}`;
+}
+
+console.log(showUserRole('Admin'));

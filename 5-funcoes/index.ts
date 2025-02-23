@@ -104,3 +104,11 @@ function sumAll(...n: number[]): number {
 }
 
 console.log(sumAll(2,8,6,9,1));
+
+//Destructuring
+function showProductDetails({name, price}: {name: string, price: number}): string {
+    return `O produto ${name} custa R$${price}`;
+}
+
+const shirt = {name: "Camisa", price: 49.90};
+console.log(showProductDetails(shirt));

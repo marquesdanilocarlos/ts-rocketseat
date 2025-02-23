@@ -109,3 +109,43 @@ const arnold: HumanWithGun = {
 };
 
 console.log(arnold);
+
+/**
+ * ReadOnly array
+ */
+
+let fruits: ReadonlyArray<string> = ['Maçã', 'Laranja', 'Kiwi'];
+
+//Não permite
+//fruits[3] = 'Mamão';
+
+//Pode modificar por método
+fruits = fruits.map(fruit => `A fruta é ${fruit}`);
+
+console.log(fruits);
+
+/**
+ * Tuplas
+ */
+
+type fiveNumbers = [number, number, number, number, number];
+
+//Não permite
+//const myNumberArray: fiveNumbers = [12, 'Danilo', 62, 37, 98, 78];
+
+const myNumberArray: fiveNumbers = [12, 42, 62, 37, 98];
+console.log(myNumberArray);
+
+type nameAndAge = [string, number];
+const anotherUser: nameAndAge = ['Danilo', 33];
+
+//Não permite
+//anotherUser[0] = 10;
+
+function showNumbers(numbers: readonly [number, number]): void {
+    //Não permite
+    //numbers[0] = 'Teste';
+    console.log(numbers);
+}
+
+showNumbers([2, 8]);

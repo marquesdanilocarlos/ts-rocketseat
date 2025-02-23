@@ -20,3 +20,20 @@ const product: Product = {
     isAvailable: true,
 }
 showProductDetails(product);
+
+//Readonly
+
+interface Car {
+    brand: string;
+    readonly wheels: number;
+}
+
+const fusca: Car = {
+    brand: 'Wolkswagen',
+    wheels: 4,
+}
+
+//Não permite
+//fusca.wheels = 3;
+
+console.log(fusca);

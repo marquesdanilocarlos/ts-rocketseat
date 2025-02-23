@@ -88,3 +88,19 @@ function doSomething(x: unknown): void {
 }
 
 doSomething(10);
+
+//Tipo never
+function showErrorMessage(msg: string): never {
+    throw new Error(msg);
+}
+
+//showErrorMessage('Caralhooo');
+
+//Rest operator
+
+function sumAll(...n: number[]): number {
+    console.log(n);
+    return n.reduce((a, b) => a + b, 0);
+}
+
+console.log(sumAll(2,8,6,9,1));

@@ -1,4 +1,6 @@
-//Interface como parâmetro
+/**
+ * Interface como parâmetro
+ */
 interface Product {
     name: string;
     price: number;
@@ -21,7 +23,9 @@ const product: Product = {
 }
 showProductDetails(product);
 
-//Readonly
+/**
+ * Readonly
+ */
 
 interface Car {
     brand: string;
@@ -38,7 +42,10 @@ const fusca: Car = {
 
 console.log(fusca);
 
-//Index Signature
+/**
+ * Index Signature
+ */
+
 interface CoordoObject {
     [index:string]: number;
 }
@@ -53,3 +60,29 @@ coords.y = 12;
 //coords.z = 'Danilo';
 
 console.log(coords);
+
+/**
+ * Extend types
+ */
+
+interface Human {
+    name: string;
+    age: number;
+}
+
+interface SuperHuman extends Human {
+    superPowers: string[];
+}
+
+const danilo: Human = {
+    name: 'Danilo',
+    age: 33,
+};
+
+const goku: SuperHuman = {
+    name: 'Goku',
+    age: 50,
+    superPowers: ['Kamehameha', 'GenkiDama'],
+};
+
+console.log(goku);

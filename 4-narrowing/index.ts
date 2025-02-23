@@ -65,3 +65,33 @@ function userGreeting(user: object) {
 
 userGreeting(john);
 userGreeting(doe);
+
+//In operator
+
+class Dog {
+    name: string;
+    breed: string;
+
+    constructor(name: string, breed?: string) {
+        this.name = name;
+
+        if (breed) {
+            this.breed = breed;
+        }
+    }
+}
+
+const dilan = new Dog("Dilan");
+const malu = new Dog("Malu", "Shitzu");
+
+function showDogDetails(dog: Dog): void {
+    if ('breed' in dog) {
+        console.log(`${dog.name} é da raça ${dog.breed}`);
+        return;
+    }
+
+    console.log(`${dog.name} não tem raça`);
+}
+
+showDogDetails(dilan);
+showDogDetails(malu);

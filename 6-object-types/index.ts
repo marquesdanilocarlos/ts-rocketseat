@@ -3,10 +3,15 @@ interface Product {
     name: string;
     price: number;
     isAvailable: boolean;
+    discount?: boolean;
 }
 
-function showProductDetails({name, price, isAvailable}: Product) {
-    console.log(name, price, isAvailable);
+function showProductDetails({name, price, isAvailable, discount}: Product) {
+    console.log(name, price, isAvailable, discount);
+
+    if (discount) {
+        console.log('Está em promoção!');
+    }
 }
 
 const product: Product = {

@@ -76,3 +76,15 @@ function defaultSum(n: number, m: number = 10): number {
 }
 
 console.log(defaultSum(5));
+
+//Parâmetro Unknown
+
+function doSomething(x: unknown): void {
+    //Necessário checar o tipo
+    if (Array.isArray(x)) {
+        console.log(x[0]);
+    }
+
+}
+
+doSomething(10);

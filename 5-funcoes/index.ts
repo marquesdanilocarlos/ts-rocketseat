@@ -69,3 +69,10 @@ function mergeArrays<T>(arr1: T[], arr2: T[]): T[] {
 
 let mergedArray: (string|number)[] = mergeArrays<number|string>([1,2,3,4], ["teste", 'Danilo']);
 console.log(mergedArray);
+
+//Parâmetro default
+function defaultSum(n: number, m: number = 10): number {
+    return n+m;
+}
+
+console.log(defaultSum(5));

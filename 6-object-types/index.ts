@@ -47,7 +47,7 @@ console.log(fusca);
  */
 
 interface CoordoObject {
-    [index:string]: number;
+    [index: string]: number;
 }
 
 let coords: CoordoObject = {
@@ -86,3 +86,26 @@ const goku: SuperHuman = {
 };
 
 console.log(goku);
+
+/**
+ * Intersection types
+ */
+
+interface Character {
+    name: string;
+}
+
+interface Gun {
+    type: string;
+    caliber: number;
+}
+
+type HumanWithGun = Character & Gun;
+
+const arnold: HumanWithGun = {
+    name: 'Arnold',
+    type: 'Shotgun',
+    caliber: 12,
+};
+
+console.log(arnold);

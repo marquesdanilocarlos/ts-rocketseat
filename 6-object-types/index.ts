@@ -37,3 +37,19 @@ const fusca: Car = {
 //fusca.wheels = 3;
 
 console.log(fusca);
+
+//Index Signature
+interface CoordoObject {
+    [index:string]: number;
+}
+
+let coords: CoordoObject = {
+    x: 10
+};
+
+coords.y = 12;
+
+//Não permite
+//coords.z = 'Danilo';
+
+console.log(coords);

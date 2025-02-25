@@ -59,3 +59,19 @@ console.log(getSomeKey(server, 'hd'));
 
 //Não permite
 //console.log(getSomeKey(server, 'gpu'));
+
+/**
+ * Keyof type operator
+ */
+type Character = {name: string, age: number, hasDriveLicense: boolean};
+type C = keyof Character;
+
+function showCharName(obj: Character, name: C): string {
+    return `O nome do personagem é ${obj[name]}`;
+}
+
+const myChar = {name: 'John', age: 30, hasDriveLicense: true};
+
+console.log(showCharName(myChar, 'name'));
+//Não permite
+//console.log(showCharName(myChar, 'weight'));

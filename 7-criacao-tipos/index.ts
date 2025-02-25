@@ -128,3 +128,25 @@ const myNewVar:myNewType = 'Danilo';
 
 console.log(someVar);
 console.log(myNewVar);
+
+/**
+ * Template literal types
+ */
+
+type testA = "text";
+
+type CustomType = `some ${testA}`;
+
+const testing:CustomType = 'some text';
+//Não permite
+//const testing2:CustomType = 'some other text';
+
+type a1 = 'Testando';
+type a2 = 'Union';
+
+type a3 = `${a1}` | `${a2}`;
+
+const test3:a3 = 'Testando';
+const test4:a3 = 'Union';
+//Não permite
+//const test5:a3 = 'Teste';

@@ -75,3 +75,15 @@ const myChar = {name: 'John', age: 30, hasDriveLicense: true};
 console.log(showCharName(myChar, 'name'));
 //Não permite
 //console.log(showCharName(myChar, 'weight'));
+
+/**
+ * Typeof type operator
+ */
+
+const userName: string = 'Danilo';
+
+//Tipo da constante baseado no tipo de userName
+const anotherUsername: typeof userName = 'João';
+
+//Não permite
+//const newUsername: typeof userName = 5;

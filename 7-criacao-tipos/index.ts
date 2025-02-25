@@ -103,3 +103,28 @@ function showKm(km: Km): string {
 
 console.log(showKm(newTruck.km));
 console.log(showKm(newCar.km));
+
+/**
+ * Conditional types
+ */
+
+interface A {}
+
+interface B extends A {}
+
+interface Teste {
+    showName(): string;
+}
+
+type myType = B extends A ? number : string;
+
+const someVar:myType = 5;
+//Não permite
+//const someVar2:myType = 'Danilo';
+
+type myNewType = Teste extends {showName(): string} ? string : number;
+
+const myNewVar:myNewType = 'Danilo';
+
+console.log(someVar);
+console.log(myNewVar);

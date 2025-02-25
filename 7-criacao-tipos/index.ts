@@ -87,3 +87,19 @@ const anotherUsername: typeof userName = 'João';
 
 //Não permite
 //const newUsername: typeof userName = 5;
+
+/**
+ * Indexed access types
+ */
+type Truck = {km: number, kg: number, description: string};
+type Km = Truck['km'];
+
+const newTruck = {km: 10000, kg: 5000, description: 'Caminhão 2021'};
+const newCar = {km: 500, kg: 1000, description: 'Carro 2021'};
+
+function showKm(km: Km): string {
+    return `O veículo tem ${km} km rodados`;
+}
+
+console.log(showKm(newTruck.km));
+console.log(showKm(newCar.km));

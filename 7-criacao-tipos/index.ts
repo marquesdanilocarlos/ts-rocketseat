@@ -41,3 +41,21 @@ const myPen:Pen = {name: 'Bic', wheels: false, engine: false, color: 'azul'};
 
 console.log(myCar);
 console.log(myPen);
+
+/**
+ * Type parameters
+ */
+
+function getSomeKey<T, K extends keyof T>(obj: T, key: K): string {
+    return `A chave ${String(key)} está presente no objeto e tem o valor ${obj[key]}`;
+}
+
+const server = {
+    hd: '2TB',
+    ram: '32GB',
+}
+
+console.log(getSomeKey(server, 'hd'));
+
+//Não permite
+//console.log(getSomeKey(server, 'gpu'));

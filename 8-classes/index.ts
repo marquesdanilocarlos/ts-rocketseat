@@ -136,3 +136,24 @@ class blogPost implements showTitle {
 
 const myPost = new blogPost('Novidades do TypeScript 4.4');
 console.log(myPost.itemTitle());
+
+/**
+ * Overriding
+ */
+
+class Base {
+    someMethod(): void {
+        console.log('Alguma coisa');
+    }
+}
+
+class New extends Base {
+    someMethod(): void {
+        console.log('Nova coisa');
+    }
+}
+
+const base = new Base();
+base.someMethod();
+const newBase = new New();
+newBase.someMethod();

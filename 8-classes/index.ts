@@ -87,3 +87,24 @@ const scania = new Truck('Scania', 500);
 const volvo = new Truck('Volvo', 450);
 scania.showDetails();
 volvo.showDetails();
+
+/**
+ * Getters and Setters
+ */
+
+class Person {
+    name: string;
+    surname: string;
+
+    constructor(name: string, surname: string) {
+        this.name = name;
+        this.surname = surname;
+    }
+
+    get fullName(): string {
+        return `${this.name} ${this.surname}`;
+    }
+}
+
+const daniloPerson = new Person('Danilo', 'Marques');
+console.log(daniloPerson.fullName);

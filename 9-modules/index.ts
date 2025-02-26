@@ -23,3 +23,13 @@ myFunction();
  */
 import {someName as name} from "./changeName";
 console.log(name);
+
+/**
+ * Import all
+ */
+
+import * as numbers from "./numbers";
+
+console.log(numbers.n1);
+console.log(numbers.n2);
+console.log(numbers.sumNumbers());

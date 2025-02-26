@@ -290,3 +290,23 @@ const MyClass = class {
 
 const person = new MyClass('Danilo');
 console.log(person);
+
+/**
+ * Abstract classes
+ */
+
+abstract class AbstractClass {
+    abstract showName(): string;
+}
+
+class ConcreteClass extends AbstractClass {
+    showName(): string {
+        return 'Danilo';
+    }
+}
+
+//Não permite
+//const abstractClass = new AbstractClass();
+
+const concreteClass = new ConcreteClass();
+console.log(concreteClass.showName());

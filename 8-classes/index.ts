@@ -62,3 +62,5 @@ class KillerMachine extends Machine {
 const destroyer = new KillerMachine('Destroyer', 10);
 console.log(tractor);
 console.log(destroyer);
+
+destroyer.kill();

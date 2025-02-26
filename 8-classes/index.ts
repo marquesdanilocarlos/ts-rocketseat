@@ -276,3 +276,17 @@ console.log(parameterProperties.qtyItem);
 //Não permite
 //console.log(parameterProperties.price);
 console.log(parameterProperties.priceItem);
+
+/**
+ * Class expressions
+ */
+const MyClass = class {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+};
+
+const person = new MyClass('Danilo');
+console.log(person);

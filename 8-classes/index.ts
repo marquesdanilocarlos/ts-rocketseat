@@ -192,3 +192,18 @@ console.log(cInstance.x);
 const dInstance = new D();
 dInstance.showY();
 dInstance.showZ();
+
+/**
+ * Static
+ */
+class StaticMembers {
+    public static x:number = 55;
+
+    public static staticMethod(): void {
+        console.log('Método estático');
+    }
+}
+
+console.log(StaticMembers.x);
+StaticMembers.staticMethod();
+

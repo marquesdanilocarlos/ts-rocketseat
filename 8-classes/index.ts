@@ -34,3 +34,31 @@ console.log(myCar);
 
 //Não permite
 //myCar.wheels = 5;
+
+/**
+ * Herança
+ */
+
+class Machine {
+    name: string;
+    constructor(name:string) {
+        this.name = name;
+    }
+}
+
+const tractor = new Machine('Trator');
+
+class KillerMachine extends Machine {
+    guns: number;
+    constructor(name:string, guns:number) {
+        super(name);
+        this.guns = guns;
+    }
+    kill(): void {
+        console.log('Killing...');
+    }
+}
+
+const destroyer = new KillerMachine('Destroyer', 10);
+console.log(tractor);
+console.log(destroyer);

@@ -115,3 +115,24 @@ const daniloPerson = new Person('Danilo', 'Marques');
 console.log(daniloPerson.fullName);
 daniloPerson.setWeight = 71;
 console.log(daniloPerson.weight);
+
+/**
+ * Implements
+ */
+
+interface showTitle {
+    itemTitle(): string;
+}
+
+class blogPost implements showTitle {
+    title: string;
+    constructor(title: string) {
+        this.title = title;
+    }
+    itemTitle(): string {
+        return `O título do post é ${this.title}`;
+    }
+}
+
+const myPost = new blogPost('Novidades do TypeScript 4.4');
+console.log(myPost.itemTitle());

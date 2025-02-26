@@ -95,6 +95,7 @@ volvo.showDetails();
 class Person {
     name: string;
     surname: string;
+    weight!: number;
 
     constructor(name: string, surname: string) {
         this.name = name;
@@ -104,7 +105,13 @@ class Person {
     get fullName(): string {
         return `${this.name} ${this.surname}`;
     }
+
+    set setWeight(weight: number){
+        this.weight = weight;
+    }
 }
 
 const daniloPerson = new Person('Danilo', 'Marques');
 console.log(daniloPerson.fullName);
+daniloPerson.setWeight = 71;
+console.log(daniloPerson.weight);

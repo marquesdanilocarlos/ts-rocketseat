@@ -157,3 +157,38 @@ const base = new Base();
 base.someMethod();
 const newBase = new New();
 newBase.someMethod();
+
+/**
+ * Visibility
+ */
+
+class C {
+    public x:number = 10;
+    protected y:number = 20;
+    private z:number = 30;
+
+    protected showZ(): void {
+        console.log(this.z);
+    }
+}
+
+class D extends C {
+    public showY(): void {
+        console.log(this.y);
+    }
+
+    public showZ() {
+        //Não permite
+        //console.log(this.z);
+        super.showZ();
+    }
+}
+
+const cInstance = new C();
+console.log(cInstance.x);
+//Não permite
+//cInstance.showZ();
+
+const dInstance = new D();
+dInstance.showY();
+dInstance.showZ();

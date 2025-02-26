@@ -1,7 +1,8 @@
 class User {
     name: string;
     age: number;
-    constructor(name:string, age:number) {
+
+    constructor(name: string, age: number) {
         this.name = name;
         this.age = age;
     }
@@ -24,7 +25,7 @@ class Car {
     name: string;
     readonly wheels: number = 4;
 
-    constructor(name:string) {
+    constructor(name: string) {
         this.name = name;
     }
 }
@@ -41,7 +42,8 @@ console.log(myCar);
 
 class Machine {
     name: string;
-    constructor(name:string) {
+
+    constructor(name: string) {
         this.name = name;
     }
 }
@@ -50,10 +52,12 @@ const tractor = new Machine('Trator');
 
 class KillerMachine extends Machine {
     guns: number;
-    constructor(name:string, guns:number) {
+
+    constructor(name: string, guns: number) {
         super(name);
         this.guns = guns;
     }
+
     kill(): void {
         console.log('Killing...');
     }
@@ -73,7 +77,7 @@ class Truck {
     model: string;
     hp: number;
 
-    constructor(model:string, hp:number) {
+    constructor(model: string, hp: number) {
         this.model = model;
         this.hp = hp;
     }
@@ -106,7 +110,7 @@ class Person {
         return `${this.name} ${this.surname}`;
     }
 
-    set setWeight(weight: number){
+    set setWeight(weight: number) {
         this.weight = weight;
     }
 }
@@ -126,9 +130,11 @@ interface showTitle {
 
 class blogPost implements showTitle {
     title: string;
+
     constructor(title: string) {
         this.title = title;
     }
+
     itemTitle(): string {
         return `O título do post é ${this.title}`;
     }
@@ -163,9 +169,9 @@ newBase.someMethod();
  */
 
 class C {
-    public x:number = 10;
-    protected y:number = 20;
-    private z:number = 30;
+    public x: number = 10;
+    protected y: number = 20;
+    private z: number = 30;
 
     protected showZ(): void {
         console.log(this.z);
@@ -197,7 +203,7 @@ dInstance.showZ();
  * Static
  */
 class StaticMembers {
-    public static x:number = 55;
+    public static x: number = 55;
 
     public static staticMethod(): void {
         console.log('Método estático');
@@ -212,10 +218,11 @@ StaticMembers.staticMethod();
  * Generic classes
  */
 
-class Item<T,U> {
-    public first:T;
-    public second:U;
-    constructor(first:T, second:U) {
+class Item<T, U> {
+    public first: T;
+    public second: U;
+
+    constructor(first: T, second: U) {
         this.first = first;
         this.second = second;
     }
@@ -238,3 +245,34 @@ const item2 = new Item('vinte', 20);
 console.log(item2);
 console.log(item2.firstItem);
 console.log(item2.secondItem);
+
+/**
+ * Parameter properties
+ */
+
+class ParameterProperties {
+    constructor(public name: number, private qty: number, protected price: number) {
+        this.name = name;
+        this.qty = qty;
+        this.price = price;
+    }
+
+    public get qtyItem(): number {
+        return this.qty;
+    }
+
+    public get priceItem(): number {
+        return this.price;
+    }
+}
+
+const parameterProperties = new ParameterProperties(1, 10, 100);
+console.log(parameterProperties.name);
+
+//Não permite
+//console.log(parameterProperties.qty);
+console.log(parameterProperties.qtyItem);
+
+//Não permite
+//console.log(parameterProperties.price);
+console.log(parameterProperties.priceItem);

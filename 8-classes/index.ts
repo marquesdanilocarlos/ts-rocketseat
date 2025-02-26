@@ -207,3 +207,34 @@ class StaticMembers {
 console.log(StaticMembers.x);
 StaticMembers.staticMethod();
 
+
+/**
+ * Generic classes
+ */
+
+class Item<T,U> {
+    public first:T;
+    public second:U;
+    constructor(first:T, second:U) {
+        this.first = first;
+        this.second = second;
+    }
+
+    get firstItem(): T {
+        return this.first;
+    }
+
+    get secondItem(): U {
+        return this.second;
+    }
+}
+
+const item = new Item(10, 'dez');
+console.log(item);
+console.log(item.firstItem);
+console.log(item.secondItem);
+
+const item2 = new Item('vinte', 20);
+console.log(item2);
+console.log(item2.firstItem);
+console.log(item2.secondItem);

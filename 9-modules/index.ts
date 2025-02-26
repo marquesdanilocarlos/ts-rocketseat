@@ -17,3 +17,9 @@ import {a, b, myFunction} from "./multiple";
 console.log(a);
 console.log(b);
 myFunction();
+
+/**
+ * Alias
+ */
+import {someName as name} from "./changeName";
+console.log(name);

@@ -21,3 +21,11 @@ isLoading = true;
 console.log(isLoading);
 
 
+/**
+ * Tipo Any
+ */
+let something: any;
+something = 'Danilo';
+console.log(something);
+something = 10;
+console.log(something);

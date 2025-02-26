@@ -29,3 +29,13 @@ something = 'Danilo';
 console.log(something);
 something = 10;
 console.log(something);
+
+/**
+ * Array
+ */
+
+let users: string[] = ['Danilo', 'Juvenal', 'Arlindo'];
+console.log(users);
+
+let numbers: Array<number> = [1, 2, 3, 4, 5];
+console.log(numbers);

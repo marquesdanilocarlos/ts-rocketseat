@@ -210,5 +210,33 @@ let profile: number = Profile.ADMIN;
 console.log(profile);
 
 
+/**
+* Generics
+ *
+ * Convenções:
+ * S => state
+ * T => Type
+ * K => Key
+ * V => Value
+ * E => Element
+ *
+ * Generic deixa a tipagem flexível, mas a tipagem que vale é somente aquela que foi definida na chamada da função
+ */
+
+function useState<T extends number | string>(){
+    let state: T;
+    function getState(): T{
+        return state;
+    }
+    function setState(newState: T){
+        state = newState;
+    }
+
+    return {getState, setState};
+}
 
 
+let newState = useState<string>();
+newState.getState();
+//newState.setState(10);
+newState.setState('Danilo');

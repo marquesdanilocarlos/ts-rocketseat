@@ -184,4 +184,17 @@ userResponse.id = 1;
 
 console.log(userResponse);
 
+/**
+ * Type restrictions
+ */
+
+type Size = 'small' | 'medium' | 'large';
+
+let size: Size;
+
+//Não permite
+//size = 'extra-large';
+
+size = 'medium';
+
 

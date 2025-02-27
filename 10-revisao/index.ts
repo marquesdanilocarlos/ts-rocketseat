@@ -197,4 +197,18 @@ let size: Size;
 
 size = 'medium';
 
+/**
+ * Enums
+ */
+enum Profile {
+    ADMIN = 1,
+    USER = 2,
+    SELLER = 3
+}
+
+let profile: number = Profile.ADMIN;
+console.log(profile);
+
+
+
 

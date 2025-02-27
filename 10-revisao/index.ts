@@ -55,3 +55,21 @@ const showMessage = (): void => {
 }
 
 showMessage();
+
+/**
+ * Tipagem em objetos
+ */
+
+let user: {name: string, age: number, phone: string, weight?: number} = {
+    name: 'Danilo',
+    age: 33,
+    phone: '999999999',
+};
+
+console.log(user);
+
+function signIn({email, password}: {email: string, password: string}): void {
+    console.log(`Bem vindo ${email}, sua senha é ${password}`);
+}
+
+signIn({email: 'danilo@dan', password: '123456'});

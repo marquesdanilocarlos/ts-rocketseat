@@ -169,3 +169,19 @@ let professor: Professor = { id: 1, name: 'Danilo', subjects: ['Matemática', 'P
 let aluno: Aluno = { id: 1, name: 'Juvenal', age: 33};
 console.log(professor);
 console.log(aluno);
+
+/**
+ * Assertion
+ */
+
+type UserResponse = {
+    id: number,
+    name: string,
+    avatar: string
+};
+let userResponse = {} as UserResponse;
+userResponse.id = 1;
+
+console.log(userResponse);
+
+

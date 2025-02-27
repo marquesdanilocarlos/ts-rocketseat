@@ -73,3 +73,14 @@ function signIn({email, password}: {email: string, password: string}): void {
 }
 
 signIn({email: 'danilo@dan', password: '123456'});
+
+/**
+ * Union types
+ */
+
+let response: string | null;
+
+response = 'Teste';
+console.log(response);
+response = null;
+console.log(response);

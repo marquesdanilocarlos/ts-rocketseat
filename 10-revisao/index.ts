@@ -102,3 +102,25 @@ function createNewProduct(product: Product): string {
 
 const newProduct = createNewProduct({id: 1, name: 'Produto 1', price: 100});
 console.log(newProduct);
+
+/**
+ * Estendendo interfaces
+ */
+interface Person {
+    id: number,
+    name: string,
+}
+
+interface Teacher extends Person {
+    subjects: string[]
+}
+
+interface Student extends Person{
+    age: number
+}
+
+let teacher: Teacher = { id: 1, name: 'Danilo', subjects: ['Matemática', 'Português']};
+let student: Student = { id: 1, name: 'Juvenal', age: 33};
+
+console.log(teacher);
+console.log(student);

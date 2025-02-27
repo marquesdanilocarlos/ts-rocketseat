@@ -57,3 +57,17 @@ const user: Record<Profile, number> = {
 const users: Record<number, User> = {
   1: {name: 'Danilo', age: 33, email: 'mail@email.com'},
 };
+
+/**
+ * Typeof
+ */
+
+interface Product {
+    name: string,
+    id: number,
+}
+
+const product: Product = {id: 1, name: 'Produto 1'};
+console.log(product);
+const newProduct: typeof product = {id: 2, name: 'Produto 2'};
+console.log(newProduct);

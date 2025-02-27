@@ -71,3 +71,17 @@ const product: Product = {id: 1, name: 'Produto 1'};
 console.log(product);
 const newProduct: typeof product = {id: 2, name: 'Produto 2'};
 console.log(newProduct);
+
+/**
+ * Keyof
+ */
+const icons = {
+    home: "./path/home.svg",
+    add: "./path/add.svg",
+    remove: "./path/remove.svg",
+}
+
+type Icon = typeof icons;
+
+//const icon: keyof Icon = 'teste';
+const icon: keyof Icon = 'home';

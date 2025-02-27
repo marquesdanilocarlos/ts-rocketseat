@@ -34,3 +34,26 @@ console.log(book2);
  */
 const book: Omit<Book, 'description'> = {title: 'Livro 3', pages: 300, author: 'Danilo'};
 console.log(book);
+
+/**
+ * Record
+ */
+
+const scores: Record<string, number> = {
+    'Danilo': 100,
+    'Juvenal': 200,
+    'Maria': 300
+};
+
+type Profile = 'admin' | 'user' | 'guest';
+
+const user: Record<Profile, number> = {
+    admin: 1,
+    user: 2,
+    guest: 3,
+    //default: 4
+};
+
+const users: Record<number, User> = {
+  1: {name: 'Danilo', age: 33, email: 'mail@email.com'},
+};

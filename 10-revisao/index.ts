@@ -39,3 +39,19 @@ console.log(users);
 
 let numbers: Array<number> = [1, 2, 3, 4, 5];
 console.log(numbers);
+
+/**
+ * Tipagem em funções
+ */
+
+function sum(a: number, b: number):number {
+    return a + b;
+}
+
+sum(10, 20);
+
+const showMessage = (): void => {
+    console.log('Hello World');
+}
+
+showMessage();

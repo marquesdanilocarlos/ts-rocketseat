@@ -1,3 +1,6 @@
+/**
+ * Partial
+ */
 interface User {
     name: string;
     age: number;
@@ -9,3 +12,18 @@ console.log(newUser);
 
 const updatedUser: Partial<User> = {name: 'Juvenal'};
 console.log(updatedUser);
+
+/**
+ * Pick
+ */
+
+interface Book {
+    title: string,
+    pages: number,
+    author: string,
+}
+
+const book1: Pick<Book, 'title'> = {title: 'Livro 1'};
+console.log(book1);
+const book2: Pick<Book, 'title' | 'pages'> = {title: 'Livro 2', pages: 532};
+console.log(book2);

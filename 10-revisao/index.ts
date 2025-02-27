@@ -84,3 +84,21 @@ response = 'Teste';
 console.log(response);
 response = null;
 console.log(response);
+
+
+/**
+ * Interfaces
+ */
+
+interface Product {
+    id :number,
+    name: string,
+    price: number,
+}
+
+function createNewProduct(product: Product): string {
+    return `Produto ${product.name} adicionado com sucesso!`;
+}
+
+const newProduct = createNewProduct({id: 1, name: 'Produto 1', price: 100});
+console.log(newProduct);

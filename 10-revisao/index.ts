@@ -124,3 +124,26 @@ let student: Student = { id: 1, name: 'Juvenal', age: 33};
 
 console.log(teacher);
 console.log(student);
+
+/**
+ * Types
+ */
+
+type Produto = {
+    id :number,
+    name: string,
+    price: number,
+}
+
+function addNewProduct (product: Produto): string {
+    return `Produto ${product.name} adicionado com sucesso!`;
+}
+
+type SelectResponse = Product[] | null;
+
+function selectProducts(): SelectResponse
+{
+    return null;
+}
+
+console.log(selectProducts());

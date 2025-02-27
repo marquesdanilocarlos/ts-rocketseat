@@ -147,3 +147,25 @@ function selectProducts(): SelectResponse
 }
 
 console.log(selectProducts());
+
+/**
+ * Type Intersection
+ */
+
+type Pessoa = {
+    id: number,
+    name: string
+};
+
+type Professor = Pessoa & {
+    subjects: string[]
+};
+
+type Aluno = Pessoa & {
+    age: number
+};
+
+let professor: Professor = { id: 1, name: 'Danilo', subjects: ['Matemática', 'Português']};
+let aluno: Aluno = { id: 1, name: 'Juvenal', age: 33};
+console.log(professor);
+console.log(aluno);
